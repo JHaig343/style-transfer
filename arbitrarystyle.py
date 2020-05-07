@@ -45,4 +45,3 @@ def draw_image_stylized(content_img, style_img, savename):
     stylized_image = outputs[0]
     converted_img = tensor_to_image((stylized_image))
     converted_img.save(savename, "PNG")
-    # return converted_img
