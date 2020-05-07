@@ -1,9 +1,11 @@
 
+// use the new Fetch API instead of Jquery to send requests
+
 // Send the images to generate a stylized one
 function sendImages() {
     const imageSpace = document.querySelector('img');
     const formData = new FormData();
-
+    // add the images to the form being sent to the server
     const contentFile = document.getElementById('contentImage');
     const styleFile = document.getElementById('styleImage');
     formData.append('contentImage', contentFile.files[0]);
