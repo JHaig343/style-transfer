@@ -23,7 +23,7 @@ def send_test_response():
 def stylize():
     savename = "images/flaskimage.png" 
     draw_image_stylized("images/webster.jpg", "images/orphism.jpg", savename=savename)
-    # return styled_image
+    
     return send_file(savename, mimetype='image/png')
 
 

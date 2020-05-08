@@ -15,3 +15,7 @@ Provide a **content** image and **style** image and `Submit`, and the neural net
 - `flask run` in the root directory
 - navigate to `localhost:5000` to see the application.
 
+### As a Docker Container:
+- `docker build -t styletransferapp .`
+- `docker run -i -p 5000:5000 styletransferapp`
+- access app through `localhost:5000`
