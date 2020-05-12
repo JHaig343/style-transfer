@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Style Transfer</title>
 </head>
+<link href="/static/style.css" rel="stylesheet">
 <body>
     <p id="foo">Welcome to my neural style transfer app!</p>
     <form id="images">
-        <input type="file" id="contentImage">
-        <input type="file" id="styleImage">
 
+        <div class="labels">
+            <label for="contentImage">Content Image:</label>
+            <label for="styleImage">Style Image:</label>
+        </div>
+
+        <input type="file" id="contentImage" onchange="testFileSelectChange();">
+        <input type="file" id="styleImage" onchange="testFileSelectChange();">
         <button type="button" onclick="sendImages();" id="submitImages">Submit</button>
     </form>
-    <img id="stylizedImage">
+    
+    <div class="contentPreview">
+        <img id="contentImgBox">
+    </div>
+
+    <div class="stylePreview">
+        <img id="styleImgBox">
+    </div>
+
+    <div class="resultPreview">
+        <img id="stylizedImage">
+    </div>
+
     <script src="/static/index.js"></script>
+    <style></style>
 </body>
 </html>

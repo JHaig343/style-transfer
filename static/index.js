@@ -3,7 +3,7 @@
 
 // Send the images to generate a stylized one
 function sendImages() {
-    const imageSpace = document.querySelector('img');
+    const imageSpace = document.getElementById('stylizedImage');
     const formData = new FormData();
     // add the images to the form being sent to the server
     const contentFile = document.getElementById('contentImage');
@@ -25,7 +25,16 @@ function sendImages() {
         console.error('Error:', error);
     });
 }
-
+// Update image previews whenever 
+function testFileSelectChange() {
+    const contentPreview = document.getElementById('contentImgBox');
+    const stylePreview = document.getElementById('styleImgBox');
+    const contentFile = document.getElementById('contentImage');
+    const styleFile = document.getElementById('styleImage');
+    
+    contentPreview.src = URL.createObjectURL(contentFile.files[0]);
+    stylePreview.src = URL.createObjectURL(styleFile.files[0]);
+}
 
 
 // test request

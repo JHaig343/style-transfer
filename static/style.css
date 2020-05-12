@@ -1,0 +1,28 @@
+.contentPreview {
+    display: inline;
+    padding-right: 15%;
+    padding-left: 5px;
+}
+/* this affects all img elements in the contentPreview div */
+.contentPreview img {
+    width: 10%;
+    height: 50%;
+}
+
+.stylePreview {
+    display: inline;
+}
+
+.stylePreview img {
+    width: 10%;
+    height: 50%;
+}
+
+.resultPreview {
+    width: auto;
+    display: inline-block;
+}
+
+.labels label {
+    padding-right: 9rem;
+}
