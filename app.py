@@ -13,12 +13,8 @@ def send_homepage():
     return render_template('index.html')
 
 
-@app.route('/test', methods=['POST'])
-def send_test_response():
-    return "Here is a Test Response!"
-
-
 # given to filenames, draw the 'content' image in the style of the 'style' image
+# For testing purposes; use with HTTP client (ex. Postman)
 @app.route('/styletransfer', methods=['POST'])
 def stylize():
     savename = "images/flaskimage.png" 
@@ -27,7 +23,7 @@ def stylize():
     return send_file(savename, mimetype='image/png')
 
 
-# Upload and generate(?) images here
+# Upload and generate images here
 @app.route('/baseImages', methods=['POST'])
 def upload_and_generate():
     if request.method == 'POST':

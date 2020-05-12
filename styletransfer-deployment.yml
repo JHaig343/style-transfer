@@ -1,0 +1,23 @@
+# Kubernetes deployment manifest for my server app
+# FIXME: containerPort isn't the same as what you get from the --port option...
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: styletransfer-deployment
+  labels:
+    app: styletransfer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: styletransfer
+  template:
+    metadata:
+      labels:
+        app: styletransfer
+    spec:
+      containers:
+      - name: style-transfer
+        image: test/styletransferapp
+        ports:
+        - containerPort: 5000

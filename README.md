@@ -19,3 +19,5 @@ Provide a **content** image and **style** image and `Submit`, and the neural net
 - `docker build -t styletransferapp .`
 - `docker run -i -p 5000:5000 styletransferapp`
 - access app through `localhost:5000`
+
+(Also working on making a Kubernetes deployment manifest for it so you can run it as part of a cluster...)

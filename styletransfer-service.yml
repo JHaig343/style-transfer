@@ -1,0 +1,13 @@
+# This service will expose the app (running on port 5000) outside the pod
+apiVersion: v1
+kind: Service
+metadata:
+  name: styletransfer-service
+  labels:
+    run: styletransfer-deployment
+spec:
+  selector:
+    app: styletransfer
+  ports:
+  - port: 5000
+    protocol: TCP
