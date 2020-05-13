@@ -19,5 +19,6 @@ spec:
       containers:
       - name: style-transfer
         image: test/styletransferapp
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
